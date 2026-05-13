@@ -31,9 +31,9 @@ export function AboutPreview({ aboutShort }: { aboutShort?: string | null }) {
             className="object-cover"
           />
           <div className="absolute bottom-4 left-4 right-4 glass-card p-4 text-sm">
-            <p className="font-serif text-base font-semibold">Est. 1985</p>
+            <p className="font-serif text-base font-semibold">Est. 2026</p>
             <p className="text-slate-600 dark:text-slate-300">
-              Four decades of nurturing curious, capable young people.
+              A new beginning — a school built for the next generation of learners.
             </p>
           </div>
         </motion.div>

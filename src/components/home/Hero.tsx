@@ -149,10 +149,10 @@ export function Hero({ name = SITE.name, tagline, motto, heroImage }: Props) {
               </div>
               <ul className="space-y-4">
                 {[
-                  { k: '2,100+', v: 'Students enrolled', accent: 'from-cyan-300 to-brand-400' },
-                  { k: '165',    v: 'Faculty members',    accent: 'from-brand-400 to-cyan-300' },
-                  { k: '40+',    v: 'Years of excellence', accent: 'from-gold-400 to-gold-500' },
-                  { k: '98%',    v: 'Board success rate',  accent: 'from-emerald-400 to-cyan-300' },
+                  { k: '500+', v: 'Seats available',     accent: 'from-cyan-300 to-brand-400' },
+                  { k: '30+',  v: 'Smart classrooms',    accent: 'from-brand-400 to-cyan-300' },
+                  { k: '12',   v: 'Acre campus',         accent: 'from-gold-400 to-gold-500' },
+                  { k: '100%', v: 'Modern facilities',   accent: 'from-emerald-400 to-cyan-300' },
                 ].map((s) => (
                   <li
                     key={s.v}

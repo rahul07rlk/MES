@@ -58,10 +58,10 @@ function StatCard({
 
 export function Stats({ stats }: { stats: SchoolStats }) {
   const items = [
-    { icon: Users,         label: 'Students enrolled',  value: stats.students ?? 2100, suffix: '+', accent: 'from-brand-600 to-brand-500' },
-    { icon: GraduationCap, label: 'Faculty members',    value: stats.faculty ?? 165,   suffix: '',  accent: 'from-cyan-500 to-brand-500' },
-    { icon: Award,         label: 'Years of excellence', value: stats.years ?? 40,     suffix: '+', accent: 'from-gold-500 to-gold-400' },
-    { icon: TrendingUp,    label: 'Board success rate',  value: stats.success_rate ?? 98, suffix: '%', accent: 'from-emerald-500 to-cyan-500' },
+    { icon: Users,         label: 'Seats available',  value: stats.students ?? 500, suffix: '+', accent: 'from-brand-600 to-brand-500' },
+    { icon: GraduationCap, label: 'Dedicated faculty', value: stats.faculty ?? 30,   suffix: '+', accent: 'from-cyan-500 to-brand-500' },
+    { icon: Award,         label: 'Smart classrooms',  value: stats.years ?? 30,     suffix: '+', accent: 'from-gold-500 to-gold-400' },
+    { icon: TrendingUp,    label: 'Modern facilities',  value: stats.success_rate ?? 100, suffix: '%', accent: 'from-emerald-500 to-cyan-500' },
   ];
 
   return (

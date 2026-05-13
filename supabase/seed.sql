@@ -12,7 +12,7 @@ insert into public.school_info (
   'Where curiosity meets character.',
   'Knowledge · Integrity · Excellence',
   'A K–12 institution preparing students for a global future through rigorous academics, creative arts, and ethical leadership.',
-  'Founded in 1985, our school has grown from a small community classroom into one of the region''s most respected K–12 institutions, serving over 2,000 students across two campuses.',
+  'Established in 2026 at Chochinde, Modern English School begins a new chapter in education for Mahad and the Raigad district — built around modern facilities, dedicated faculty, and a curriculum designed for the next generation of learners.',
   'To nurture lifelong learners who lead with empathy, think critically, and contribute meaningfully to a connected world.',
   'We deliver a balanced curriculum that fuses rigorous academics with the arts, athletics, and service, in a campus culture rooted in respect and curiosity.',
   'Mrs. Kumudini Ravindra Chavan',
@@ -25,7 +25,7 @@ insert into public.school_info (
   'https://instagram.com/modernenglishschool',
   'https://twitter.com/modernenglishschool',
   'https://youtube.com/@modernenglishschool',
-  '{"students": 2100, "faculty": 165, "years": 40, "success_rate": 98}'::jsonb
+  '{"students": 500, "faculty": 30, "years": 30, "success_rate": 100}'::jsonb
 )
 on conflict do nothing;
 

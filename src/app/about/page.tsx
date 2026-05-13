@@ -38,10 +38,10 @@ export default async function AboutPage() {
           </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">Our history</p>
-            <h2 className="mt-2 text-3xl md:text-4xl font-serif font-semibold">Four decades of nurturing curious minds</h2>
+            <h2 className="mt-2 text-3xl md:text-4xl font-serif font-semibold">A new chapter in Mahad's education</h2>
             <p className="mt-4 text-slate-600 dark:text-slate-300 leading-relaxed">
               {info?.history ??
-                'Founded in 1985, our school has grown from a small community classroom into one of the region\'s most respected K–12 institutions.'}
+                'Established in 2026 at Chochinde, Modern English School begins a new chapter in education for Mahad and the Raigad district — built around modern facilities, dedicated faculty, and a curriculum designed for the next generation of learners.'}
             </p>
           </div>
         </div>
