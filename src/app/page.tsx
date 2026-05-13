@@ -3,6 +3,8 @@ import { Hero } from '@/components/home/Hero';
 import { NewsTicker } from '@/components/home/NewsTicker';
 import { Stats } from '@/components/home/Stats';
 import { AboutPreview } from '@/components/home/AboutPreview';
+import { AcademicPrograms } from '@/components/home/AcademicPrograms';
+import { Facilities } from '@/components/home/Facilities';
 import { PrincipalMessage } from '@/components/home/PrincipalMessage';
 import { EventsPreview } from '@/components/home/EventsPreview';
 import { Testimonials } from '@/components/home/Testimonials';
@@ -18,7 +20,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
 };
 
-export const revalidate = 300; // 5 minutes ISR
+export const revalidate = 300;
 
 export default async function HomePage() {
   const [info, events, announcements, testimonials] = await Promise.all([
@@ -39,6 +41,8 @@ export default async function HomePage() {
       <NewsTicker items={announcements} />
       <Stats stats={info?.stats ?? {}} />
       <AboutPreview aboutShort={info?.about_short} />
+      <AcademicPrograms />
+      <Facilities />
       <PrincipalMessage
         name={info?.principal_name}
         message={info?.principal_message}

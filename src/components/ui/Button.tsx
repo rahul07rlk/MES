@@ -2,21 +2,22 @@ import { forwardRef } from 'react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
-type Variant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'accent';
+type Variant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'accent' | 'gold';
 type Size = 'sm' | 'md' | 'lg';
 
 const variants: Record<Variant, string> = {
-  primary: 'bg-brand-600 text-white hover:bg-brand-700 shadow-soft',
-  secondary: 'bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100',
-  outline: 'border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800',
-  ghost: 'hover:bg-slate-100 dark:hover:bg-slate-800',
-  accent: 'bg-accent-500 text-white hover:bg-accent-600 shadow-soft',
+  primary:   'bg-gradient-brand text-white shadow-glow hover:shadow-glass-lg hover:-translate-y-0.5',
+  secondary: 'bg-ink-900 text-white hover:bg-ink-800 dark:bg-white dark:text-ink-900 dark:hover:bg-ink-100',
+  outline:   'border border-ink-300 dark:border-white/15 text-ink-900 dark:text-white hover:bg-ink-100 dark:hover:bg-white/5',
+  ghost:     'text-ink-900 dark:text-white hover:bg-ink-100 dark:hover:bg-white/10',
+  accent:    'bg-cyan-500 text-white hover:bg-cyan-600 shadow-glow',
+  gold:      'bg-gradient-gold text-ink-950 shadow-glow-gold hover:-translate-y-0.5',
 };
 
 const sizes: Record<Size, string> = {
-  sm: 'h-9 px-3 text-sm',
+  sm: 'h-9 px-4 text-sm',
   md: 'h-11 px-5 text-sm',
-  lg: 'h-12 px-6 text-base',
+  lg: 'h-12 px-6 text-[15px]',
 };
 
 type CommonProps = {
@@ -33,8 +34,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps | AnchorProps>(
   ({ variant = 'primary', size = 'md', className, children, ...props }, ref) => {
     const classes = cn(
       'inline-flex items-center justify-center gap-2 rounded-full font-semibold',
-      'transition-all duration-200 focus-visible:outline-none focus-visible:ring-2',
-      'focus-visible:ring-brand-500 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none',
+      'transition-all duration-300 focus-visible:outline-none focus-visible:ring-2',
+      'focus-visible:ring-cyan-500 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none',
       variants[variant], sizes[size], className
     );
 

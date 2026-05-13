@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
@@ -8,8 +8,13 @@ import { Toaster } from 'sonner';
 import { SITE } from '@/lib/constants';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
-const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair', display: 'swap' });
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'], variable: '--font-jakarta', display: 'swap',
+  weight: ['300', '400', '500', '600', '700', '800'],
+});
+const playfair = Playfair_Display({
+  subsets: ['latin'], variable: '--font-playfair', display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -46,7 +51,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${jakarta.variable} ${playfair.variable}`}>
       <body className="min-h-screen flex flex-col">
         <ThemeProvider>
           <Navbar />

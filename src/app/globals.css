@@ -8,46 +8,131 @@
   --muted: 210 40% 96%;
   --muted-foreground: 215 16% 47%;
   --border: 214 32% 91%;
+  --ring: 199 89% 48%;
 }
 
 .dark {
-  --background: 222 47% 6%;
+  --background: 222 84% 5%;     /* #020617 */
   --foreground: 210 40% 98%;
-  --muted: 217 33% 14%;
+  --muted: 217 33% 12%;
   --muted-foreground: 215 20% 65%;
   --border: 217 33% 18%;
+  --ring: 199 89% 60%;
 }
 
 @layer base {
   html { scroll-behavior: smooth; }
   body {
-    @apply bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
-    font-feature-settings: 'rlig' 1, 'calt' 1;
+    @apply bg-ink-50 text-ink-900 antialiased dark:bg-ink-950 dark:text-ink-50;
+    font-feature-settings: 'rlig' 1, 'calt' 1, 'ss01' 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
   }
   ::selection {
-    @apply bg-brand-200/60 text-brand-900 dark:bg-brand-500/30 dark:text-brand-100;
+    @apply bg-cyan-500/30 text-ink-900 dark:text-white;
   }
-  h1, h2, h3, h4, h5, h6 { @apply font-serif tracking-tight; }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tighter-2 font-semibold;
+  }
 }
 
 @layer components {
+  /* ─── Glassmorphism ─────────────────────────────────────── */
   .glass {
-    @apply bg-white/60 dark:bg-white/5 backdrop-blur-xl
+    @apply bg-white/60 dark:bg-white/[0.04]
+           backdrop-blur-xl backdrop-saturate-150
            border border-white/40 dark:border-white/10
            shadow-glass;
   }
   .glass-card {
     @apply glass rounded-2xl;
   }
+  .glass-strong {
+    @apply bg-white/80 dark:bg-ink-900/60
+           backdrop-blur-2xl backdrop-saturate-150
+           border border-white/50 dark:border-white/10
+           shadow-glass-lg rounded-2xl;
+  }
+
+  /* ─── Neumorphism (soft) ────────────────────────────────── */
+  .neu {
+    @apply bg-ink-50 dark:bg-ink-900 rounded-2xl
+           shadow-neu dark:shadow-neu-dark;
+  }
+  .neu-inset {
+    @apply bg-ink-50 dark:bg-ink-900 rounded-2xl shadow-neu-inset;
+  }
+
+  /* ─── Buttons (premium) ────────────────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+           bg-gradient-brand text-white font-semibold
+           px-6 py-3 shadow-glow
+           hover:shadow-glass-lg hover:-translate-y-0.5
+           active:translate-y-0
+           transition-all duration-300;
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+           bg-gradient-gold text-ink-950 font-semibold
+           px-6 py-3 shadow-glow-gold
+           hover:-translate-y-0.5 hover:shadow-glass-lg
+           transition-all duration-300;
+  }
+
+  /* ─── Layout ──────────────────────────────────────────── */
   .container-wide { @apply container max-w-7xl; }
+  .section { @apply py-20 md:py-28; }
+
+  /* ─── Premium gradient text ───────────────────────────── */
   .gradient-text {
     @apply bg-clip-text text-transparent
-           bg-gradient-to-r from-brand-600 via-brand-500 to-accent-500;
+           bg-gradient-to-r from-brand-600 via-brand-500 to-cyan-500;
   }
-  .section { @apply py-16 md:py-24; }
+  .gradient-text-gold {
+    @apply bg-clip-text text-transparent bg-gradient-gold;
+  }
+
+  /* ─── Section dividers ────────────────────────────────── */
+  .divider-fade {
+    background: linear-gradient(to right, transparent, theme('colors.ink.200'), transparent);
+    height: 1px;
+  }
+  .dark .divider-fade {
+    background: linear-gradient(to right, transparent, theme('colors.ink.700'), transparent);
+  }
+
+  /* ─── Background utilities ────────────────────────────── */
+  .bg-dots {
+    @apply bg-grid-light dark:bg-grid-dark;
+    background-size: 24px 24px;
+  }
+  .bg-mesh {
+    @apply bg-mesh-light dark:bg-mesh-dark;
+  }
 }
 
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* Soft mask used for fade-out edges on horizontal scrollers */
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+
+  /* Shimmer effect for cards */
+  .shimmer {
+    background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,0.06) 40%, rgba(255,255,255,0.18) 50%, rgba(255,255,255,0.06) 60%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2.4s linear infinite;
+  }
+}
+
+/* Focus-visible ring */
+:focus-visible {
+  outline: 2px solid theme('colors.cyan.500');
+  outline-offset: 2px;
+  border-radius: 0.5rem;
 }
