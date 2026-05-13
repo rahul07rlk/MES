@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --border: 214 32% 91%;
+}
+
+.dark {
+  --background: 222 47% 6%;
+  --foreground: 210 40% 98%;
+  --muted: 217 33% 14%;
+  --muted-foreground: 215 20% 65%;
+  --border: 217 33% 18%;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+  ::selection {
+    @apply bg-brand-200/60 text-brand-900 dark:bg-brand-500/30 dark:text-brand-100;
+  }
+  h1, h2, h3, h4, h5, h6 { @apply font-serif tracking-tight; }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/60 dark:bg-white/5 backdrop-blur-xl
+           border border-white/40 dark:border-white/10
+           shadow-glass;
+  }
+  .glass-card {
+    @apply glass rounded-2xl;
+  }
+  .container-wide { @apply container max-w-7xl; }
+  .gradient-text {
+    @apply bg-clip-text text-transparent
+           bg-gradient-to-r from-brand-600 via-brand-500 to-accent-500;
+  }
+  .section { @apply py-16 md:py-24; }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
