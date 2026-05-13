@@ -43,16 +43,16 @@ export function Footer() {
           <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
             <li className="flex items-start gap-2">
               <MapPin className="h-4 w-4 mt-0.5 shrink-0 text-brand-600" />
-              <span>12 Hillcrest Avenue, Bengaluru 560001</span>
+              <span>At/Post Chochinde, Tal. Mahad, Dist. Raigad, Maharashtra 402301, India</span>
             </li>
             <li className="flex items-center gap-2">
               <Phone className="h-4 w-4 text-brand-600" />
-              <a href="tel:+918012345678" className="hover:text-brand-600">+91 80 1234 5678</a>
+              <a href="tel:+919527461618" className="hover:text-brand-600">+91 95274 61618</a>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-brand-600" />
-              <a href="mailto:admissions@modernexcellence.edu" className="hover:text-brand-600">
-                admissions@modernexcellence.edu
+              <a href="mailto:admissions@modernenglishschool.edu" className="hover:text-brand-600">
+                admissions@modernenglishschool.edu
               </a>
             </li>
           </ul>

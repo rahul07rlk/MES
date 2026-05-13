@@ -130,27 +130,31 @@ export type ContactMessage = {
   created_at: string;
 };
 
+type Table<R> = { Row: R; Insert: Partial<R>; Update: Partial<R>; Relationships: [] };
+
 export type Database = {
   public: {
     Tables: {
-      school_info: { Row: SchoolInfo; Insert: Partial<SchoolInfo>; Update: Partial<SchoolInfo> };
-      faculty: { Row: Faculty; Insert: Partial<Faculty>; Update: Partial<Faculty> };
-      events: { Row: EventItem; Insert: Partial<EventItem>; Update: Partial<EventItem> };
-      announcements: { Row: Announcement; Insert: Partial<Announcement>; Update: Partial<Announcement> };
-      gallery: { Row: GalleryItem; Insert: Partial<GalleryItem>; Update: Partial<GalleryItem> };
-      admissions: { Row: AdmissionInquiry; Insert: Partial<AdmissionInquiry>; Update: Partial<AdmissionInquiry> };
-      testimonials: { Row: Testimonial; Insert: Partial<Testimonial>; Update: Partial<Testimonial> };
-      contact_messages: { Row: ContactMessage; Insert: Partial<ContactMessage>; Update: Partial<ContactMessage> };
-      newsletter_subscribers: {
-        Row: { id: string; email: string; confirmed: boolean; created_at: string };
-        Insert: { email: string; confirmed?: boolean };
-        Update: { email?: string; confirmed?: boolean };
-      };
-      admins: {
-        Row: { user_id: string; email: string; full_name: string | null; created_at: string };
-        Insert: { user_id: string; email: string; full_name?: string | null };
-        Update: { email?: string; full_name?: string | null };
-      };
+      school_info: Table<SchoolInfo>;
+      faculty: Table<Faculty>;
+      events: Table<EventItem>;
+      announcements: Table<Announcement>;
+      gallery: Table<GalleryItem>;
+      admissions: Table<AdmissionInquiry>;
+      testimonials: Table<Testimonial>;
+      contact_messages: Table<ContactMessage>;
+      newsletter_subscribers: Table<{
+        id: string; email: string; confirmed: boolean; created_at: string;
+      }>;
+      admins: Table<{
+        user_id: string; email: string; full_name: string | null; created_at: string;
+      }>;
     };
+    Views: Record<string, never>;
+    Functions: {
+      is_admin: { Args: Record<string, never>; Returns: boolean };
+    };
+    Enums: Record<string, never>;
+    CompositeTypes: Record<string, never>;
   };
 };

@@ -1,9 +1,9 @@
 export const SITE = {
-  name: process.env.NEXT_PUBLIC_SITE_NAME ?? 'Modern Excellence School',
+  name: process.env.NEXT_PUBLIC_SITE_NAME ?? 'Modern English School',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yourschool.edu',
   description:
     'A K–12 institution preparing students for a global future through rigorous academics, creative arts, and ethical leadership.',
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '15551234567',
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '919527461618',
 };
 
 export const NAV_LINKS = [

@@ -1,5 +1,5 @@
 -- ============================================================================
--- Modern Excellence School — Supabase Schema
+-- Modern English School — Supabase Schema
 -- Run this in the SQL editor on your Supabase project.
 -- ============================================================================
 

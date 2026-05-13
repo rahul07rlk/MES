@@ -25,9 +25,9 @@ export default async function ContactPage() {
       <section className="section">
         <div className="container-wide grid lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2 space-y-6">
-            <ContactCard icon={MapPin} title="Visit us" lines={[info?.address ?? '12 Hillcrest Avenue, Bengaluru 560001']} />
-            <ContactCard icon={Phone} title="Call us" lines={[info?.phone ?? '+91 80 1234 5678']} />
-            <ContactCard icon={Mail} title="Email us" lines={[info?.email ?? 'admissions@modernexcellence.edu']} />
+            <ContactCard icon={MapPin} title="Visit us" lines={[info?.address ?? 'At/Post Chochinde, Tal. Mahad, Dist. Raigad, Maharashtra 402301, India']} />
+            <ContactCard icon={Phone} title="Call us" lines={[info?.phone ?? '+91 95274 61618']} />
+            <ContactCard icon={Mail} title="Email us" lines={[info?.email ?? 'admissions@modernenglishschool.edu']} />
             <ContactCard icon={Clock} title="Office hours" lines={['Mon – Fri  8:00 AM – 4:30 PM', 'Sat  9:00 AM – 12:30 PM']} />
 
             <div className="glass-card p-6">

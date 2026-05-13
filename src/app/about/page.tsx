@@ -8,7 +8,7 @@ import { getSchoolInfo } from '@/lib/queries';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Our history, vision, mission, and the people who shape Modern Excellence School.',
+  description: 'Our history, vision, mission, and the people who shape Modern English School.',
 };
 
 export const revalidate = 600;

@@ -8,23 +8,23 @@ insert into public.school_info (
   facebook_url, instagram_url, twitter_url, youtube_url,
   stats
 ) values (
-  'Modern Excellence School',
+  'Modern English School',
   'Where curiosity meets character.',
   'Knowledge · Integrity · Excellence',
   'A K–12 institution preparing students for a global future through rigorous academics, creative arts, and ethical leadership.',
   'Founded in 1985, our school has grown from a small community classroom into one of the region''s most respected K–12 institutions, serving over 2,000 students across two campuses.',
   'To nurture lifelong learners who lead with empathy, think critically, and contribute meaningfully to a connected world.',
   'We deliver a balanced curriculum that fuses rigorous academics with the arts, athletics, and service, in a campus culture rooted in respect and curiosity.',
-  'Dr. Anjali Mehta',
-  'At Modern Excellence School we believe every child carries a spark — our role is to fan it into a flame. Our faculty and staff are committed to creating a learning environment where students feel seen, challenged, and inspired.',
-  '12 Hillcrest Avenue, Bengaluru, Karnataka 560001, India',
-  '+91 80 1234 5678',
-  'admissions@modernexcellence.edu',
-  '+919876543210',
-  'https://facebook.com/modernexcellence',
-  'https://instagram.com/modernexcellence',
-  'https://twitter.com/modernexcellence',
-  'https://youtube.com/@modernexcellence',
+  'Mrs. Kumudini Ravindra Chavan',
+  'At Modern English School we believe every child carries a spark — our role is to fan it into a flame. Our faculty and staff are committed to creating a learning environment where students feel seen, challenged, and inspired.',
+  'At/Post Chochinde, Tal. Mahad, Dist. Raigad, Maharashtra 402301, India',
+  '+91 95274 61618',
+  'admissions@modernenglishschool.edu',
+  '+919527461618',
+  'https://facebook.com/modernenglishschool',
+  'https://instagram.com/modernenglishschool',
+  'https://twitter.com/modernenglishschool',
+  'https://youtube.com/@modernenglishschool',
   '{"students": 2100, "faculty": 165, "years": 40, "success_rate": 98}'::jsonb
 )
 on conflict do nothing;
@@ -32,7 +32,7 @@ on conflict do nothing;
 -- Faculty
 insert into public.faculty (name, designation, department, qualification, experience_years, bio, image_url, display_order)
 values
-  ('Dr. Anjali Mehta', 'Principal', 'Administration', 'Ph.D. in Education, M.A. English', 28, 'Leading the school since 2014.', 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600', 0),
+  ('Mrs. Kumudini Ravindra Chavan', 'Principal', 'Administration', 'B.Ed., M.Ed., M.Phil., Ph.D.', 25, 'Leading the school with a vision of holistic education.', 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600', 0),
   ('Mr. Rohan Kapoor', 'Head of Mathematics', 'Mathematics', 'M.Sc. Mathematics, B.Ed.', 18, 'Olympiad coach and competition mentor.', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600', 1),
   ('Ms. Priya Iyer', 'Senior Science Teacher', 'Science', 'M.Sc. Physics, B.Ed.', 12, 'Specialises in lab-led inquiry.', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600', 2),
   ('Mr. Daniel Park', 'English Department Lead', 'English', 'M.A. English Literature', 15, 'Debate and literary club mentor.', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600', 3),

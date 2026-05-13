@@ -1,4 +1,4 @@
-# Modern Excellence School — Website
+# Modern English School — Website
 
 A production-grade school website built with **Next.js 15 (App Router) + React 19 + TypeScript + Tailwind CSS + Framer Motion**, backed by **Supabase** (Postgres, Auth, Storage, RLS) and deployed on **Vercel**.
 
@@ -133,7 +133,7 @@ NEXT_PUBLIC_SUPABASE_URL=https://xxxxx.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ...
 SUPABASE_SERVICE_ROLE_KEY=eyJ...
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
-NEXT_PUBLIC_SITE_NAME="Modern Excellence School"
+NEXT_PUBLIC_SITE_NAME="Modern English School"
 NEXT_PUBLIC_WHATSAPP_NUMBER=919876543210
 ```
 
